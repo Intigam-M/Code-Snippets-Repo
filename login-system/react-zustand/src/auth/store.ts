@@ -8,7 +8,6 @@ interface AuthState {
 
 const useAuth = create<AuthState>((set) => ({
     user: localStorage.getItem("user") || "",
-    // login: (user) => set({ user }),
     login: (user) => set(() => {
         localStorage.setItem("user", user);
         return { user };

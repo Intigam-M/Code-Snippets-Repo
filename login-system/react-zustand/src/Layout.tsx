@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 function Layout() {
     return (
-        <div className="bg-gray-400 h-[100vh]">
+        <div>
             <Navbar />
             <div>
                 <Outlet />

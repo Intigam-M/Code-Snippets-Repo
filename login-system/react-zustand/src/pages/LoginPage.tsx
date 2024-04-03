@@ -4,7 +4,6 @@ import useAuth from "../auth/store";
 const Login = () => {
     const navigate = useNavigate();
     const { user, login } = useAuth();
-    console.log(user);
 
     if (user) return <Navigate to="/" />;
 
@@ -14,12 +13,7 @@ const Login = () => {
     };
     return (
         <div>
-            <button
-                onClick={onclickHandler}
-                className="bg-red-500 text-white p-3"
-            >
-                login
-            </button>
+            <button onClick={onclickHandler}>login</button>
         </div>
     );
 };
