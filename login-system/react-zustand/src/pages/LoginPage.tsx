@@ -1,12 +1,15 @@
 import { Navigate, useNavigate } from "react-router-dom";
+import useAuth from "../auth/store";
 
 const Login = () => {
     const navigate = useNavigate();
+    const { user, login } = useAuth();
+    console.log(user);
 
     if (user) return <Navigate to="/" />;
 
     const onclickHandler = () => {
-        dispatch({ type: "ADD", user: "intgam" });
+        login("intigam");
         navigate("/about");
     };
     return (

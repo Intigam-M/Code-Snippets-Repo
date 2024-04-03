@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
+import useAuth from "../auth/store";
 
-export const NavBar = () => {
+const Navbar = () => {
+    const { logout, user } = useAuth();
+    console.log(user);
     return (
         <nav>
             <ul className="flex space-x-8">
@@ -11,11 +14,11 @@ export const NavBar = () => {
                     <NavLink to="/about">About</NavLink>
                 </li>
                 <li>
-                    <button >
-                        Logout
-                    </button>
+                    <button onClick={() => logout()}>Logout</button>
                 </li>
             </ul>
         </nav>
     );
 };
+
+export default Navbar;
