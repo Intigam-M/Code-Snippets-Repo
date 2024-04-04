@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
-import { PrivateRoutes } from "./PrivateRoutes";
+import PrivateRoutes from "./PrivateRoutes";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 
